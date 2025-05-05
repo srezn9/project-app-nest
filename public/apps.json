@@ -1,0 +1,194 @@
+[
+  {
+    "id": "app001",
+    "name": "Focus Keeper",
+    "developer": "Pixster Studio",
+    "thumbnail": "https://i.postimg.cc/QCSv4wjp/stefan-cosma-0g-O3-b-5m80-unsplash.jpg",
+    "banner": "https://i.postimg.cc/T35Hgp5j/chase-clark-d-Gq-WUPPesr-Q-unsplash.jpg",
+    "downloads": 1200000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "paid": true,
+    "description": "Focus Keeper helps you keep your productivity high while avoiding burnout using the Pomodoro technique.",
+    "features": [
+      "Customizable timer",
+      "Productivity charts",
+      "Goal tracking"
+    ],
+    "reviews": [
+      {
+        "user": "productive_mind",
+        "rating": 4,
+        "comment": "Simple and effective, but would love dark mode."
+      }
+    ]
+  },
+  {
+    "id": "app002",
+    "name": "Word Wizard",
+    "developer": "Bright Minds Inc.",
+    "thumbnail": "https://i.postimg.cc/bv3bvRYm/sven-brandsma-C5-SUk-YZT7n-U-unsplash.jpg",
+    "banner": "https://i.postimg.cc/0NQGD4BT/sincerely-media-g-G86-Pd-Iz-UA-unsplash.jpg",
+    "downloads": 500000,
+    "category": "Education",
+    "rating": 4.5,
+    "paid": true,
+    "description": "Boost your vocabulary and spelling skills with fun and challenging word games in Word Wizard.",
+    "features": [
+      "Daily word challenges",
+      "Multi-level word puzzles",
+      "Leaderboard competitions"
+    ],
+    "reviews": [
+      {
+        "user": "vocab_queen",
+        "rating": 5,
+        "comment": "I improved my vocabulary so much!"
+      }
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "TaskMe",
+    "developer": "NextGen Apps",
+    "thumbnail": "https://i.postimg.cc/3R2kvC3M/walls-io-Ntcu-G3oc-C-E-unsplash.jpg",
+    "banner": "https://i.postimg.cc/sg52zC3y/seaview-n-Qf-OQSM8n-XCo-unsplash.jpg",
+    "downloads": 2200000,
+    "category": "Productivity",
+    "rating": 4.7,
+    "paid": true,
+    "description": "TaskMe is your smart to-do list app with powerful features to help you organize your tasks and goals.",
+    "features": [
+      "Recurring tasks",
+      "Reminders and alerts",
+      "Collaboration with friends"
+    ],
+    "reviews": [
+      {
+        "user": "organized_life",
+        "rating": 5,
+        "comment": "My favorite to-do app! Clean and easy to use."
+      }
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "Battle Quest",
+    "developer": "Epic Gaming Co.",
+    "thumbnail": "https://i.postimg.cc/d1JY588c/jaime-spaniol-L0-N74-GWsq8-unsplash.jpg",
+    "banner": "https://i.postimg.cc/gkxPtc6j/nik-shuliahin-JOzv-p-Akc-Mk-unsplash.jpg",
+    "downloads": 5000000,
+    "category": "Gaming",
+    "rating": 4.3,
+    "paid": true,
+    "description": "Battle Quest is an epic adventure RPG game where you fight monsters and complete thrilling quests.",
+    "features": [
+      "Epic boss battles",
+      "Customizable heroes",
+      "Daily rewards"
+    ],
+    "reviews": [
+      {
+        "user": "gamer_ryan",
+        "rating": 4,
+        "comment": "Awesome gameplay but needs more characters."
+      }
+    ]
+  },
+  {
+    "id": "app005",
+    "name": "Zen Color",
+    "developer": "Relaxify Studio",
+    "thumbnail": "https://i.postimg.cc/NMjnyb6F/pawel-czerwinski-3k9-PGKWt7ik-unsplash.jpg",
+    "banner": "https://i.postimg.cc/4dYrLBmM/lucas-k-w-QLAGv4-OYs-unsplash.jpg",
+    "downloads": 2000000,
+    "category": "Gaming",
+    "rating": 4.9,
+    "paid": true,
+    "description": "Relax and relieve stress with Zen Color, a coloring app for adults with thousands of beautiful pictures.",
+    "features": [
+      "Daily new coloring pages",
+      "Offline coloring",
+      "Soothing music"
+    ],
+    "reviews": [
+      {
+        "user": "art_lover23",
+        "rating": 5,
+        "comment": "This app calms me down after a long day. Love it!"
+      }
+    ]
+  },
+  {
+    "id": "app006",
+    "name": "Skill Master",
+    "developer": "LearnFast Ltd.",
+    "thumbnail": "https://i.postimg.cc/d01X34m1/branko-stancevic-GI1hw-OGq-Gt-E-unsplash.jpg",
+    "banner": "https://i.postimg.cc/XY2HR9S0/cookie-the-pom-gy-SMaoc-Sdqs-unsplash.jpg",
+    "downloads": 1800000,
+    "category": "Education",
+    "rating": 4.4,
+    "paid": false,
+    "description": "Learn new skills quickly and efficiently with Skill Master, offering courses in design, marketing, and more.",
+    "features": [
+      "Video-based courses",
+      "Certificates of completion",
+      "Offline access"
+    ],
+    "reviews": [
+      {
+        "user": "design_guru",
+        "rating": 5,
+        "comment": "Great for picking up design basics fast!"
+      }
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "Quick Notes",
+    "developer": "Simple Tools",
+    "thumbnail": "https://i.postimg.cc/7hym3V7S/aaron-burden-x-G8-IQMq-MITM-unsplash.jpg",
+    "banner": "https://i.postimg.cc/zBNgpPtD/kelly-sikkema-md-ADGzy-XCVE-unsplash.jpg",
+    "downloads": 3100000,
+    "category": "Productivity",
+    "rating": 4.2,
+    "paid": false,
+    "description": "Quick Notes is a lightweight, fast note-taking app perfect for jotting down ideas on the go.",
+    "features": [
+      "Color-coded notes",
+      "Sync with cloud",
+      "Password protection"
+    ],
+    "reviews": [
+      {
+        "user": "note_taker99",
+        "rating": 4,
+        "comment": "Simple and does the job, but needs more font options."
+      }
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "Galaxy Raiders",
+    "developer": "Nova Play",
+    "thumbnail": "https://i.postimg.cc/bN5S4vCB/alek-kalinowski-Sj-3-Jdr19-L4-unsplash.jpg",
+    "banner": "https://i.postimg.cc/hjKXVQvf/jeremy-straub-Gp-VTuahi2a-M-unsplash.jpg",
+    "downloads": 2750000,
+    "category": "Gaming",
+    "rating": 4.7,
+    "paid": false,
+    "description": "Pilot your spaceship, defeat alien fleets, and conquer galaxies in this action-packed shooter game.",
+    "features": [
+      "Multiplayer space battles",
+      "Upgradeable ships",
+      "Stunning galaxy maps"
+    ],
+    "reviews": [
+      {
+        "user": "space_captain",
+        "rating": 5,
+        "comment": "Addicted! Best space shooter out there."
+      }
+    ]
+  }
+]
