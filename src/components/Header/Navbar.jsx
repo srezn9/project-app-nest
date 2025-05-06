@@ -90,7 +90,7 @@ const Navbar = () => {
         
       {user ? (
           <>
-            {/* Show User Info */}
+            
             <div className="flex items-center space-x-2">
               <img
                 className="w-10 h-10 rounded-full"
@@ -101,13 +101,13 @@ const Navbar = () => {
               <span className="font-semibold">{user.displayName}</span>
             </div>
 
-            {/* Logout Button */}
+            
             <button onClick={handleLogout} className="btn bg-blue-950 text-white ml-5">
               Logout
             </button>
           </>
         ) : (
-          // Show Login button if user not logged in
+          
           <Link to="/login" className="btn bg-blue-600 text-white">
             Login
           </Link>

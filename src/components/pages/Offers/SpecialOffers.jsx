@@ -15,13 +15,17 @@ const SpecialOffers = () => {
         </marquee>
       </div>
 
-      
+      <div className="space-y-5">
+      <span className="text-blue-600 text-sm">New to this page?</span>
       <h2 className="text-2xl font-bold text-blue-600 mb-2 flex justify-center items-center">
+        
         <FaGift className="mr-2 text-3xl" />
-        Check Out Special Offers!
+        Start With Our Special Offers!
       </h2>
       
       <p className="text-gray-600 mb-4">Get exclusive deals on top apps today.</p>
+      </div>
+      
       
       <Link to="/offers" className="btn btn-primary">
         View Offers

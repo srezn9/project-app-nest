@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const TrendingApps = ({ app }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 p-4 w-70 ">
+    <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 p-4  ">
       <Link to={`/app-details/${app.id}`} className="block">
       <img
         src={app.thumbnail}

@@ -22,13 +22,13 @@ const Footer = () => {
       </aside>
 
       <nav className="grid grid-flow-col gap-4">
-        <a href="/terms" className="link link-hover text-blue-950">
+        <a href="https://policies.google.com/terms?hl=en-BD&fg=1" className="link link-hover text-blue-950">
           Terms of Service
         </a>
-        <a href="/privacy" className="link link-hover text-blue-950">
+        <a href="https://policies.google.com/privacy?hl=en-BD&fg=1" className="link link-hover text-blue-950">
           Privacy Policy
         </a>
-        <a href="/developer" className="link link-hover text-blue-950">
+        <a href="https://developers.google.com/" className="link link-hover text-blue-950">
           Developer Resources
         </a>
       </nav>
