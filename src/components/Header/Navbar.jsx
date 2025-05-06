@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
+  const {user, logout} = useContext(AuthContext);
+  const handleLogout = ()=>{
+    logout()
+    .then(()=>{
+      toast.success('Logged out successfully');
+    })
+    .catch((error)=>{
+      toast.error('Error', error.message, 'error')
+    })
+  }
   const links = (
     <>
       <li>
@@ -76,7 +88,30 @@ const Navbar = () => {
       
       <div className="navbar-end">
         
-        <Link to="/login" className="btn bg-blue-600 text-white">Login</Link>
+      {user ? (
+          <>
+            {/* Show User Info */}
+            <div className="flex items-center space-x-2">
+              <img
+                className="w-10 h-10 rounded-full"
+                src={user.photoURL}
+                alt={user.displayName}
+                title={user.displayName}
+              />
+              <span className="font-semibold">{user.displayName}</span>
+            </div>
+
+            {/* Logout Button */}
+            <button onClick={handleLogout} className="btn bg-blue-950 text-white ml-5">
+              Logout
+            </button>
+          </>
+        ) : (
+          // Show Login button if user not logged in
+          <Link to="/login" className="btn bg-blue-600 text-white">
+            Login
+          </Link>
+        )}
         
       </div>
     </div>

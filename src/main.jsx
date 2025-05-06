@@ -7,11 +7,16 @@ import {
   RouterProvider,
 } from "react-router";
 import { router } from './Routes/Routes';
+import { ToastContainer } from 'react-toastify';
+import AuthProvider from './Provider/AuthProvider';
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
+    <ToastContainer></ToastContainer>
+    </AuthProvider>
   </StrictMode>,
 )

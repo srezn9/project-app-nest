@@ -9,6 +9,8 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import OfferDetails from "../components/pages/Offers/OfferDetails";
 import Login from "../components/pages/Login";
 import Register from "../components/pages/Register";
+import PrivateRoute from "./PrivateRoute";
+import Profile from "../components/pages/Profile";
 
 
 export const router = createBrowserRouter([
@@ -30,7 +32,19 @@ export const router = createBrowserRouter([
             const apps = await res.json();
             return apps.find(app => app.id === params.id);
           },
-          element: <AppDetails></AppDetails>,
+          element: (
+            <PrivateRoute>
+              <AppDetails></AppDetails>
+            </PrivateRoute>
+          ),
+        },
+        {
+          path: "/profile",
+          element: (
+            <PrivateRoute>
+              <Profile></Profile>
+            </PrivateRoute>
+          ),
         },
         {
           loader: ()=>fetch('/apps.json'),
