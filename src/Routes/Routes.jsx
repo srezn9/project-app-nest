@@ -7,6 +7,8 @@ import Home from "../components/Home/Home";
 import AppDetails from "../components/pages/AppDetails";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import OfferDetails from "../components/pages/Offers/OfferDetails";
+import Login from "../components/pages/Login";
+import Register from "../components/pages/Register";
 
 
 export const router = createBrowserRouter([
@@ -34,17 +36,22 @@ export const router = createBrowserRouter([
           loader: ()=>fetch('/apps.json'),
           path: "/offers",
           element: <OfferDetails></OfferDetails>
-        }
+        },
+        {
+          path: "/login",
+          element: <Login></Login>,
+          
+        },
+        {
+          path: "/register",
+          element: <Register></Register>,
+        },
+        
+        
       ]
     },
-    {
-        path: "/auth/login",
-        element: <div>Auth</div>,
-      },
-      {
-        path: "/auth/register",
-        element: <div>apps</div>,
-      },
+    
+      
       {
         path: "/*",
         element: <ErrorPage></ErrorPage>,
