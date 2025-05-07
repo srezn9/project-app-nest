@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router";
-import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import { AuthContext } from "../../Provider/AuthContext";
+import { Helmet } from "react-helmet";
 
 
 const Register = () => {
@@ -23,7 +24,7 @@ const Register = () => {
         }
 
         register(email, password)
-        .then(result => {
+        .then(() => {
             updateUserProfile({
                 displayName: name,
                 photoURL: photoURL
@@ -38,6 +39,9 @@ const Register = () => {
 
   return (
     <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl ">
+      <Helmet>
+        <title>Register - AppNest</title>
+      </Helmet>
       <h2 className="text-center p-5 text-3xl font-bold text-blue-950">
         Register Now
       </h2>
@@ -49,6 +53,7 @@ const Register = () => {
             name="name"
             className="input"
             placeholder="Your name"
+            required
           />
           <label className="label text-blue-950">Photo URL</label>
           <input
@@ -56,6 +61,7 @@ const Register = () => {
             name="photoURL"
             className="input"
             placeholder="Photo URL"
+            required
           />
           <label className="label text-blue-950">Email</label>
           <input
@@ -63,6 +69,7 @@ const Register = () => {
             name="email"
             className="input"
             placeholder="Email"
+            required
           />
           <label className="label text-blue-950">Password</label>
           <input
@@ -70,6 +77,7 @@ const Register = () => {
             name="password"
             className="input"
             placeholder="Password"
+            required
           />
 
           <button className="btn bg-blue-600 text-white mt-4">Register</button>

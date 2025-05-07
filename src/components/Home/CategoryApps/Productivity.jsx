@@ -10,7 +10,7 @@ const Productivity = () => {
   );
 
   return (
-    <div className="my-20 max-w-7xl mx-auto p-10">
+    <div className="my-10 max-w-7xl mx-auto p-10">
       <h2 className="text-2xl md:text-3xl text-blue-950 font-bold mb-4 ml-6">
         Productivity
       </h2>

@@ -2,13 +2,13 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-horizontal footer-center bg-white text-blue-950 p-10 border-t-2 shadow-xl border-blue-600">
+    <footer className="footer footer-horizontal footer-center bg-gray-100 text-blue-950 p-10 border-t-2 shadow-xl border-blue-300">
       <aside>
         <div className="font-bold">
           <div className="flex justify-center items-center">
             <img
               className="w-20"
-              src="https://i.postimg.cc/VNs1mQ60/blue-white-logo-with-symbol-that-says-e-1277164-16616.avif"
+              src="https://i.postimg.cc/N0xS6bC2/Appnest.png"
               alt=""
             />
             <h2 className="text-xl flex items-center font-bold text-blue-950">

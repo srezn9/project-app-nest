@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router";
-import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import { AuthContext } from "../../Provider/AuthContext";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
     const {login, googleLogin} =useContext(AuthContext);
@@ -13,10 +14,10 @@ const Login = () => {
         const password = e.target.password.value;
 
         login(email, password)
-        .then((result)=>{
+        .then(()=>{
             toast.success('Logged in successfully!');
             navigate('/');
-            // console.log(result);
+            ;
         })
         .catch((error)=>{
             toast.error(error.message);
@@ -27,7 +28,7 @@ const Login = () => {
 
     const handleGoogleLogin = () => {
         googleLogin()
-          .then(result => {
+          .then(() => {
             toast.success('Logged in with Google!');
             navigate('/');
           })
@@ -37,6 +38,10 @@ const Login = () => {
       };
   return (
     <div className="card bg-base-100 w-full mx-auto max-w-sm shrink-0 shadow-2xl ">
+      <Helmet>
+        <title>Login - AppNest</title>
+      </Helmet>
+      
       <h2 className="text-center p-5 text-3xl font-bold text-blue-950">
         Login Now
       </h2>
@@ -48,6 +53,7 @@ const Login = () => {
             name="email"
             className="input"
             placeholder="Email"
+            required
           />
           <label className="label text-blue-950">Password</label>
           <input
@@ -55,6 +61,7 @@ const Login = () => {
             name="password"
             className="input"
             placeholder="Password"
+            required
           />
           <div>
             <a className="link link-hover text-blue-950">Forgot password?</a>

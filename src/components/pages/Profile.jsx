@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import { AuthContext } from "../../Provider/AuthContext";
+import { Helmet } from "react-helmet";
 
 const Profile = () => {
   const { user, updateUserProfile } = useContext(AuthContext);
@@ -24,6 +25,9 @@ const Profile = () => {
 
   return (
     <div className="max-w-md mx-auto p-5 mt-10 bg-base-100 shadow-lg rounded-xl">
+      <Helmet>
+        <title>My-Profile - AppNest</title>
+      </Helmet>
       <h2 className="text-2xl font-bold text-center text-blue-950 mb-5">
         My Profile
       </h2>

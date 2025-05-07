@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router";
-import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import { AuthContext } from "../../Provider/AuthContext";
 
 const Navbar = () => {
   const {user, logout} = useContext(AuthContext);
@@ -12,8 +12,8 @@ const Navbar = () => {
     })
     .catch((error)=>{
       toast.error('Error', error.message, 'error')
-    })
-  }
+    });
+  };
   const links = (
     <>
       <li>
@@ -71,7 +71,7 @@ const Navbar = () => {
         <div className="flex justify-center items-center">
           <img
             className="w-20"
-            src="https://i.postimg.cc/VNs1mQ60/blue-white-logo-with-symbol-that-says-e-1277164-16616.avif"
+            src="https://i.postimg.cc/N0xS6bC2/Appnest.png"
             alt=""
           />
           <h2 className="text-xl flex items-center font-bold text-blue-950">
@@ -86,12 +86,12 @@ const Navbar = () => {
       </div>
 
       
-      <div className="navbar-end">
+      <div className="navbar-end  mr-5 space-x-2">
         
       {user ? (
           <>
             
-            <div className="flex items-center space-x-2">
+            <div className="lg:flex items-center space-x-2 hidden">
               <img
                 className="w-10 h-10 rounded-full"
                 src={user.photoURL}
@@ -102,7 +102,7 @@ const Navbar = () => {
             </div>
 
             
-            <button onClick={handleLogout} className="btn bg-blue-950 text-white ml-5">
+            <button onClick={handleLogout} className="btn bg-blue-950 text-white">
               Logout
             </button>
           </>

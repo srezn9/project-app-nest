@@ -5,11 +5,11 @@ import AppCard from "./AppCard";
 
 const Gaming = () => {
   const apps = useLoaderData();
-  console.log(apps);
+  
   const gamingApps = apps.filter(
     (app) => app.category === "Gaming"
   );
-  console.log(gamingApps);
+  
 
   return (
     <div className="my-20 max-w-7xl mx-auto p-10">

@@ -20,7 +20,7 @@ const SpecialOffers = () => {
       <h2 className="text-2xl font-bold text-blue-600 mb-2 flex justify-center items-center">
         
         <FaGift className="mr-2 text-3xl" />
-        Start With Our Special Offers!
+        Check Out Special Offers!
       </h2>
       
       <p className="text-gray-600 mb-4">Get exclusive deals on top apps today.</p>

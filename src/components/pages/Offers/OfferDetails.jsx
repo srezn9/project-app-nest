@@ -1,20 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const OfferDetails = () => {
   const allApps = useLoaderData();
-  const freeApps = allApps.filter((app) => app.paid === false);
+
+  // New state
+  const [loading, setLoading] = useState(true);
+  const [freeApps, setFreeApps] = useState([]);
+
+  useEffect(() => {
+    if (allApps && Array.isArray(allApps)) {
+      // Filter apps
+      const free = allApps.filter((app) => app.paid === false);
+      setFreeApps(free);
+      // After processing, stop loading
+      setLoading(false);
+    }
+  }, [allApps]);
 
   const handleInstall = (appName) => {
     toast.success(`${appName} installed successfully!`);
   };
 
+  // Loader UI
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <span className="loading loading-spinner loading-lg text-green-600"></span>
+      </div>
+    );
+  }
+
   return (
     <div className="my-10 px-4">
+      <Helmet>
+        <title>Offer-Details - AppNest</title>
+      </Helmet>
       <h1 className="text-3xl font-bold text-center text-green-600 mb-8">
-         Try Out Our Free Apps 
+        Try Out Our Free Apps
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -42,7 +68,6 @@ const OfferDetails = () => {
         ))}
       </div>
 
-      
       <ToastContainer position="top-center" />
     </div>
   );
