@@ -9,7 +9,7 @@ const OfferDetails = () => {
 
   const [loading, setLoading] = useState(true);
   const [freeApps, setFreeApps] = useState([]);
-  const [installedApps, setInstalledApps] = useState([]); // Track installed apps
+  const [installedApps, setInstalledApps] = useState([]);
 
   useEffect(() => {
     if (allApps && Array.isArray(allApps)) {
@@ -21,11 +21,11 @@ const OfferDetails = () => {
 
   const handleToggleInstall = (appId, appName) => {
     if (installedApps.includes(appId)) {
-      // Uninstall
+      
       setInstalledApps(installedApps.filter((id) => id !== appId));
       toast.error(`${appName} uninstalled successfully!`);
     } else {
-      // Install
+      
       setInstalledApps([...installedApps, appId]);
       toast.success(`${appName} installed successfully!`);
     }

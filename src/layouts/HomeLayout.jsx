@@ -9,7 +9,7 @@ const HomeLayout = () => {
   const location = useLocation();
   const navigation = useNavigation();
 
-  // Loader while route is changing
+  
   if (navigation.state === "loading") {
     return <Loader />;
   }

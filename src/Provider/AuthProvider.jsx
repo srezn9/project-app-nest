@@ -11,31 +11,31 @@ const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-     // Register
+     
   const register = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-   // Login
+   
    const login = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-   // Google Login
+   
    const googleLogin = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
-   // Logout
+   
    const logout = () => {
     setLoading(true);
     return signOut(auth);
   };
 
-  // Track user state
+  
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);
@@ -44,7 +44,7 @@ const AuthProvider = ({children}) => {
     return () => unsubscribe();
   }, []);
 
-  // Update Profile
+  
   const updateUserProfile = (profile) => {
     return updateProfile(auth.currentUser, profile);
   };
