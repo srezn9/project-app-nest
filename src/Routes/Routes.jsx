@@ -11,6 +11,7 @@ import Login from "../components/pages/Login";
 import Register from "../components/pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import Profile from "../components/pages/Profile";
+import Loader from "../components/Loader";
 
 
 export const router = createBrowserRouter([
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
           loader: ()=>fetch('/apps.json'),
           path: "/",
           element: <Home></Home>,
+          hydrateFallbackElement:<Loader></Loader>,
         },
         {
           
@@ -37,6 +39,7 @@ export const router = createBrowserRouter([
               <AppDetails></AppDetails>
             </PrivateRoute>
           ),
+          hydrateFallbackElement:<Loader></Loader>,
         },
         {
           path: "/profile",
@@ -49,7 +52,8 @@ export const router = createBrowserRouter([
         {
           loader: ()=>fetch('/apps.json'),
           path: "/offers",
-          element: <OfferDetails></OfferDetails>
+          element: <OfferDetails></OfferDetails>,
+          hydrateFallbackElement:<Loader></Loader>,
         },
         {
           path: "/login",
