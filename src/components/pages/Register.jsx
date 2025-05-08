@@ -6,7 +6,7 @@ import { AuthContext } from "../../Provider/AuthContext";
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-  const { register, updateUserProfile } = useContext(AuthContext);
+  const { register, updateUserProfile, googleLogin} = useContext(AuthContext);
   const navigate = useNavigate();
   const [accepted, setAccepted] = useState(false);
 
@@ -20,19 +20,31 @@ const Register = () => {
     const uppercase = /[A-Z]/.test(password);
     const lowercase = /[a-z]/.test(password);
     if (!uppercase || !lowercase || password.length < 6) {
-      return toast.error('Password must have uppercase, lowercase and at least 6 characters.');
+      return toast.error(
+        "Password must have uppercase, lowercase and at least 6 characters."
+      );
     }
 
     register(email, password)
       .then(() => {
         updateUserProfile({
           displayName: name,
-          photoURL: photoURL
+          photoURL: photoURL,
         });
-        toast.success('Registered successfully!');
-        navigate('/');
+        toast.success("Registered successfully!");
+        navigate("/");
       })
-      .catch(error => {
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then(() => {
+        toast.success("Logged in with Google!");
+        navigate("/");
+      })
+      .catch((error) => {
         toast.error(error.message);
       });
   };
@@ -80,7 +92,6 @@ const Register = () => {
             required
           />
 
-          
           <div className="flex items-center gap-2 mt-4">
             <input
               type="checkbox"
@@ -88,18 +99,21 @@ const Register = () => {
               onChange={(e) => setAccepted(e.target.checked)}
             />
             <label htmlFor="terms" className="text-sm text-blue-950">
-              I accept the <Link to="/terms" className="text-blue-600 underline">Terms and Conditions</Link>
+              I accept the{" "}
+              <Link to="/terms" className="text-blue-600 underline">
+                Terms and Conditions
+              </Link>
             </label>
           </div>
 
           <button
             className="btn bg-blue-600 text-white mt-4"
             type="submit"
-            disabled={!accepted} 
+            disabled={!accepted}
           >
             Register
           </button>
-          <button
+          <button onClick={handleGoogleLogin}
             type="button"
             className="btn border mt-3 flex items-center justify-center gap-2"
           >
@@ -107,7 +121,6 @@ const Register = () => {
             Continue with Google
           </button>
 
-          
           <p className="pt-5 text-center">
             Already have an account?{" "}
             <Link to="/login" className="text-red-500">
