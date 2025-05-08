@@ -7,25 +7,30 @@ import "react-toastify/dist/ReactToastify.css";
 const OfferDetails = () => {
   const allApps = useLoaderData();
 
-  // New state
   const [loading, setLoading] = useState(true);
   const [freeApps, setFreeApps] = useState([]);
+  const [installedApps, setInstalledApps] = useState([]); // Track installed apps
 
   useEffect(() => {
     if (allApps && Array.isArray(allApps)) {
-      // Filter apps
       const free = allApps.filter((app) => app.paid === false);
       setFreeApps(free);
-      // After processing, stop loading
       setLoading(false);
     }
   }, [allApps]);
 
-  const handleInstall = (appName) => {
-    toast.success(`${appName} installed successfully!`);
+  const handleToggleInstall = (appId, appName) => {
+    if (installedApps.includes(appId)) {
+      // Uninstall
+      setInstalledApps(installedApps.filter((id) => id !== appId));
+      toast.error(`${appName} uninstalled successfully!`);
+    } else {
+      // Install
+      setInstalledApps([...installedApps, appId]);
+      toast.success(`${appName} installed successfully!`);
+    }
   };
 
-  // Loader UI
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
@@ -44,28 +49,35 @@ const OfferDetails = () => {
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {freeApps.map((app) => (
-          <div
-            key={app.id}
-            className="rounded-2xl shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition duration-600"
-          >
-            <img
-              src={app.thumbnail}
-              alt={app.name}
-              className="w-full h-40 object-cover rounded-xl mb-4"
-            />
-            <h2 className="text-xl font-semibold text-blue-700 mb-2">
-              {app.name}
-            </h2>
-            <p className="text-gray-600 mb-4">{app.description}</p>
-            <button
-              onClick={() => handleInstall(app.name)}
-              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full transition"
+        {freeApps.map((app) => {
+          const isInstalled = installedApps.includes(app.id);
+          return (
+            <div
+              key={app.id}
+              className="rounded-2xl shadow-xl p-4 flex flex-col items-center text-center hover:shadow-2xl transition duration-600"
             >
-              Install
-            </button>
-          </div>
-        ))}
+              <img
+                src={app.thumbnail}
+                alt={app.name}
+                className="w-full h-40 object-cover rounded-xl mb-4"
+              />
+              <h2 className="text-xl font-semibold text-blue-700 mb-2">
+                {app.name}
+              </h2>
+              <p className="text-gray-600 mb-4">{app.description}</p>
+              <button
+                onClick={() => handleToggleInstall(app.id, app.name)}
+                className={`${
+                  isInstalled
+                    ? "bg-red-500 hover:bg-red-600"
+                    : "bg-green-500 hover:bg-green-600"
+                } text-white px-4 py-2 rounded-full transition`}
+              >
+                {isInstalled ? "Uninstall" : "Install"}
+              </button>
+            </div>
+          );
+        })}
       </div>
 
       <ToastContainer position="top-center" />

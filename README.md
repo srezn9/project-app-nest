@@ -1,12 +1,30 @@
-# React + Vite
+# Project Name: My Assignment 09
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose
+This project is a simple AppStore platform where users can browse and explore different applications. It was built as part of my assignment to practice React and Vite. The project focuses on dynamic routing, UI component styling, and using external packages like Firebase for hosting and data handling.
 
-Currently, two official plugins are available:
+## Live URL
+[Click here to view the live site](https://my-assignment-09-6ab90.web.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Features
+- Browse apps by categories
+- Search functionality
+- Responsive design (works on mobile and desktop)
+- Built with React + Vite for fast performance
+- Smooth page transitions
+- Modern UI using Tailwind CSS and DaisyUI
+- Toast notifications for user feedback
+- SEO optimized with React Helmet
+- Swiper slider for featured apps carousel
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## NPM Packages Used
+- **react**: For building the UI
+- **react-router-dom**: For routing between pages
+- **tailwindcss**: For utility-first styling
+- **daisyui**: For pre-styled components
+- **react-icons**: For icons
+- **react-toastify**: For toast notifications
+- **react-helmet**: For managing document head
+- **swiper**: For slider/carousel functionality
+- **firebase**: For hosting and backend services
+- **vite**: For development and build tool
