@@ -14,7 +14,7 @@ This project is a simple AppStore platform where users can browse and explore di
 - Smooth page transitions
 - Modern UI using Tailwind CSS and DaisyUI
 - Toast notifications for user feedback
-- SEO optimized with React Helmet
+- SEO optimized with React Helmet async
 - Swiper slider for featured apps carousel
 
 ## NPM Packages Used
@@ -24,7 +24,7 @@ This project is a simple AppStore platform where users can browse and explore di
 - **daisyui**: For pre-styled components
 - **react-icons**: For icons
 - **react-toastify**: For toast notifications
-- **react-helmet**: For managing document head
+- **react-helmet-async**: For managing document head
 - **swiper**: For slider/carousel functionality
 - **firebase**: For hosting and backend services
 - **vite**: For development and build tool

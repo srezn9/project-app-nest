@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router";
 
 const TrendingApps = ({ app }) => {
-  console.log(app);
+
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition transform hover:scale-105 p-4  ">
       <Link to={`/app/${app.id}`} className="block">

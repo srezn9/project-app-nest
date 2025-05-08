@@ -5,7 +5,7 @@ import Productivity from "./CategoryApps/Productivity";
 import Gaming from "./CategoryApps/Gaming";
 import Educational from "./CategoryApps/Educational";
 import SpecialOffers from "../pages/Offers/SpecialOffers";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const apps = useLoaderData();
