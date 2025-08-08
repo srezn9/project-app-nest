@@ -1,4 +1,4 @@
-# Project Name: My Assignment 09
+# Project Name: AppNest
 
 ## Purpose
 This project is a simple AppStore platform where users can browse and explore different applications. It was built as part of my assignment to practice React and Vite. The project focuses on dynamic routing, UI component styling, and using external packages like Firebase for hosting and data handling.
